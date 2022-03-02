@@ -66,21 +66,21 @@
   observer.observe(tata);
 
   const icon = document.querySelector('.iconmenu');
-  const iconmenu = document.getElementById('iconmenu');
-  const ull = document.querySelector('.iconmenu ul');
-  const iconmenuu = document.getElementById('iconmenuu');
+  const openicon = document.querySelector('.open-icon');
+  // const ull = document.querySelector('.iconmenu ul');
+  const closeicon = document.querySelector('.close-icon');
 
-  iconmenu.addEventListener('click', ()=>{
+  openicon.addEventListener('click', ()=>{
     icon.classList.add('show');
-    ull.classList.add('show');
-    iconmenu.classList.add('close');
-    iconmenuu.classList.add('show');
+    // ull.classList.add('show');
+    openicon.classList.add('close');
+    closeicon.classList.add('show');
   })
   
-  iconmenuu.addEventListener('click', ()=>{
-    ull.classList.remove('show');
-    iconmenu.classList.remove('close');
-    iconmenuu.classList.remove('show');
+  closeicon.addEventListener('click', ()=>{
+    // ull.classList.remove('show');
+    openicon.classList.remove('close');
+    closeicon.classList.remove('show');
     icon.classList.remove('show');
   })
 }
